@@ -24,41 +24,51 @@
 
   <form action="">
 
-    <div class="infoEvent">
-      <h2>Informações do Evento</h2>
-      <label for="title">Título do evento <span>(mínmo 8 caracteres)</span></label>
-      <input type="text" id="title">
-      <label for="link">Link do evento <span>(comece com https://)</span></label>
-      <input type="text" id="link">
-      <label for="wApp">Whatsapp para contato <span>(somente números)</span></label>
-      <input type="text" id="wApp">
-      <label for="info">Informações extras</label>
-      <textarea id="info"></textarea>
-      <label for="category">Categoria</label>
-      <select id="category">Tipo do evento</select>
-    </div>
+    <fieldset>
+      <legend>Informações do Evento</legend>
+      <div class="line"></div>
+      <div class="infoEvent">
+        <label for="title">Título do evento <span>(mínmo 8 caracteres)</span></label>
+        <input type="text" id="title">
+        <label for="link">Link do evento <span>(comece com https://)</span></label>
+        <input type="text" id="link">
+        <label for="wApp">Whatsapp para contato <span>(somente números)</span></label>
+        <input type="text" id="wApp">
+        <label for="info">Informações extras</label>
+        <textarea id="info"></textarea>
+        <label for="category">Categoria</label>
+        <select id="category">Tipo do evento</select>
+      </div>
 
-    <div class="privacity">
-      <h2>Privacidade</h2>
-      <label for="email">E-mail do administrador <span>(digite um email válido)</span></label>
-      <input type="text" id="email">
-      <label for="password">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span></label>
-      <input type="text">
-      <input type="checkbox" id="check">
-      <label for="check">Evento privado</label>
-    </div>
+    </fieldset>
 
-    <div class="data">
-      <h2>Dia e hora</h2>
-      <label for="day">Data</label>
-      <input type="date" id="day">
-      <label for="fHour">Das</label>
-      <input type="time" id="fHour">
-      <label for="lHour">Até</label>
-      <input type="time" id="lHour">
-      <button>Salvar evento</button>
-    </div>
+    <fieldset>
+      <legend>Privacidade</legend>
+      <div class="line"></div>
+      <div class="privacity">
+        <label for="email">E-mail do administrador <span>(digite um email válido)</span></label>
+        <input type="text" id="email">
+        <label for="password">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span></label>
+        <input type="text">
+        <input type="checkbox" id="check">
+        <label for="check">Evento privado</label>
+      </div>
+    </fieldset>
 
+    <fieldset>
+      <legend>Dia e hora</legend>
+      <div class="line"></div>
+      <div class="date">
+        <label for="day">Data</label>
+        <input type="date" id="day">
+        <label for="fHour">Das</label>
+        <input type="time" id="fHour">
+        <label for="lHour">Até</label>
+        <input type="time" id="lHour">
+      </div>
+    </fieldset>
+
+    <div class="button"><button>Salvar evento</button></div>
   </form>
 </body>
 
