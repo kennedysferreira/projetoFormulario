@@ -24,6 +24,7 @@
 
   <form action="">
 
+
     <fieldset>
       <legend>Informações do Evento</legend>
       <div class="line"></div>
@@ -37,7 +38,11 @@
         <label for="info">Informações extras</label>
         <textarea id="info"></textarea>
         <label for="category">Categoria</label>
-        <select id="category">Tipo do evento</select>
+        <select id="category">
+          <option value="live">Ao vivo</option>
+          <option value="podcast">Podcast</option>
+          <option value="metory">Mentoria</option>
+        </select>
       </div>
 
     </fieldset>
@@ -49,7 +54,7 @@
         <label for="email">E-mail do administrador <span>(digite um email válido)</span></label>
         <input type="text" id="email">
         <label for="password">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span></label>
-        <input type="text">
+        <input type="password" id="password">
         <input type="checkbox" id="check">
         <label for="check">Evento privado</label>
       </div>
@@ -58,18 +63,29 @@
     <fieldset>
       <legend>Dia e hora</legend>
       <div class="line"></div>
-      <div class="date">
-        <label for="day">Data</label>
-        <input type="date" id="day">
-        <label for="fHour">Das</label>
-        <input type="time" id="fHour">
-        <label for="lHour">Até</label>
-        <input type="time" id="lHour">
-      </div>
-    </fieldset>
 
-    <div class="button"><button>Salvar evento</button></div>
+      <div class="date">
+
+        <div class="wrapper">
+          <label for="day">Data</label>
+          <input type="date" id="day">
+        </div>
+
+        <div class="wrapper">
+          <label for="fHour">Das</label>
+          <input type="time" id="fHour">
+        </div>
+        
+        <div class="wrapper">
+          <label for="lHour">Até</label>
+          <input type="time" id="lHour">
+        </div>
+
+      </div>
+      
+    </fieldset>
   </form>
+  <div class="button"><button>Salvar evento</button></div>
 </body>
 
 </html>
