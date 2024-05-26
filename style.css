@@ -157,7 +157,6 @@ fieldset select {
 .date {
   display: flex;
   gap: 20px;
-
 }
 .wrapper {
   display: flex;
@@ -165,7 +164,7 @@ fieldset select {
 }
 
 .wrapper #day {
-  width: 310px ;
+  width: 310px;
 }
 
 .button {
@@ -175,33 +174,83 @@ fieldset select {
 
   text-align: center;
   margin: auto;
+  padding: 40px 60px;
+
 
   width: 736px;
   height: 136px;
   background-color: #f0f0f4;
 
+  border-top: 1px solid #D6D6D6;
+  border-radius: 0px 0px 8px 8px ;
+}
+
+.button input {
+  padding: 15px 40px;
+
+  width: 608px;
+  height: 56px;
+
+  background: #04d361;
+  border-radius: 10px 8px 8px 8px;
   border: none;
-  border-radius: 10px 0px 8px 8px ;
+
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+
+  color: #ffffff;
 }
 
-.button button {
- 
-padding: 15px 40px;
-
-width: 608px;
-height: 56px;
-
-background: #04D361;
-border-radius: 10px 8px 8px 8px;
-border: none;
-
-font-family: 'Archivo';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 26px;
-
-color: #FFFFFF;
-
+.button input:hover {
+  background: #04ad50;
 }
 
+
+
+.checkbox {  
+  position: relative;
+  height: 24px;
+  margin-top: 24px;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 16px;
+}
+
+.checkbox input {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+
+.checkbox label::before {
+ content: '';
+
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  display: block;
+
+  border: 1px solid #e6e6f0;
+}
+
+.checkbox input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.checkbox input:focus + label::before {
+  outline: 2px solid black;
+}
+
+input:invalid {
+  border: 1px solid #FF1010;
+}
